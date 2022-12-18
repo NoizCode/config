@@ -116,7 +116,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
-                widget.Battery(background=["131313","062606"], # Just to create the last arrow effect
+                widget.Battery(background=["131313","292E03"], # Just to create the last arrow effect
                                foreground="131313",
                                fontsize=0.1,
                                **powerline),
@@ -160,7 +160,7 @@ screens = [
                                       background="C3DD0B",
                                       **powerline),
             ],
-            22, background=["131313","062606"],
+            22, background=["131313","292E03"],
         ),
     ),
 ]
