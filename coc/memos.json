@@ -568,8 +568,7 @@
       },
       "sysPrefix": "/usr",
       "fileHash": "f46475c328c25efe7a61bc3cab8fe23840169455c297e7a834c51e4b0e18b811d4421cfba151341bd80a84be0ae1307dbc3ad576134135abb17fe09b7f4cb53a",
-      "type": "Unknown",
-      "cachedEntry": true
+      "type": "Unknown"
     },
     "preferredGlobalPyInterpreter": {
       "architecture": 3,
@@ -1300,7 +1299,6 @@
       "sysPrefix": "/usr",
       "fileHash": "f46475c328c25efe7a61bc3cab8fe23840169455c297e7a834c51e4b0e18b811d4421cfba151341bd80a84be0ae1307dbc3ad576134135abb17fe09b7f4cb53a",
       "type": "Unknown",
-      "cachedEntry": true,
       "displayName": "Python 3.10.8 64-bit"
     },
     "/usr/bin/python.interpreter.Details.v7": {
