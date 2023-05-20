@@ -21,7 +21,7 @@ terminal = guess_terminal()
 
 powerline = {
         "decorations": [
-            PowerLineDecoration(path="arrow_right",
+            PowerLineDecoration(path="forward_slash",
                                 size=7)
         ]
 }
@@ -62,7 +62,11 @@ keys = [
     Key([mod], "q", lazy.spawn("pcmanfm"), desc="open file explorer"),
 
     # Toggle keyboard layout
-    Key([mod],"f11", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout")
+    Key([mod],"f11", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
+
+    # Media
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5%-"), desc="Lower Volume by 5%"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5%+"), desc="Raise Volume by 5%")
 ]
 
 groups = [Group(i) for i in "1234"]
@@ -88,7 +92,7 @@ for i in groups:
 layouts = [
     layout.Tile(
         margin = 12,
-        border_focus="929E07",
+        border_focus="51E0F0",
         border_width=2),
 ]
 
@@ -101,15 +105,15 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper="/home/noisefuck/Pictures/wallpaper1.jpg",
+        wallpaper="/home/noisefuck/Pictures/blue1.jpeg",
         wallpaper_mode='fit',
         top=bar.Bar(
             [
                 widget.GroupBox(font="sans Bold",
-                                this_current_screen_border="C3DD0B",
+                                this_current_screen_border="51E0F0",
                                 border_width=20),
                 widget.Prompt(),
-                widget.WindowName(foreground="C3DD0B",
+                widget.WindowName(foreground="51E0F0",
                                   font="sans Bold"),
                 widget.Chord(
                     chords_colors={
@@ -118,7 +122,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
-                widget.Battery(background=["131313","292E03"], # Just to create the last arrow effect
+                widget.Battery(background=["1F1F1F"], # Just to create the last arrow effect
                                foreground="131313",
                                fontsize=0.1,
                                **powerline),
@@ -127,42 +131,42 @@ screens = [
                                     display_format="🗘 : {updates}",
                                     no_update_string="🗘 : 0",
                                     font="sans Bold",
-                                    colour_no_updates="1C900A",
-                                    foreground="1C900A",
-                                    background="C3DD0B",
+                                    colour_no_updates="FFFFFF",
+                                    foreground="FFFFFF",
+                                    background="51E0F0",
                                     **powerline),
                 widget.CPU(format="{freq_current}GHz {load_percent}%",
-                           foreground="C3DD0B",
-                           background="1C900A",
+                           foreground="FFFFFF",
+                           background="5180F0",
                            font="sans Bold",
                            **powerline),
                 widget.Memory(measure_mem='G',
-                              foreground="1C900A",
-                              background="C3DD0B",
+                              foreground="FFFFFF",
+                              background="51E0F0",
                               font="sans Bold",
                               **powerline),
                 widget.Net(interface="enp8s0",
                              format='↑{up} ↓{down}',
-                             foreground="C3DD0B",
-                             background="1C900A",
+                             foreground="FFFFFF",
+                             background="5180F0",
                              font="sans Bold",
                              **powerline),
                 widget.Clock(format="%d-%m %a %I:%M %p",
-                             foreground="1C900A",
-                             background="C3DD0B",
+                             foreground="FFFFFF",
+                             background="51E0F0",
                              font="sans Bold",
                              **powerline),
-                widget.PulseVolume(foreground="C3DD0B",
-                                   background="1C900A",
+                widget.PulseVolume(foreground="FFFFFF",
+                                   background="5180F0",
                                    font="sans Bold",
                                    **powerline),
                 widget.KeyboardLayout(configured_keyboards=['us','gr'],
-                                      foreground="1C900A",
+                                      foreground="FFFFFF",
                                       font="sans Bold",
-                                      background="C3DD0B",
+                                      background="51E0F0",
                                       **powerline),
             ],
-            22, background=["131313","292E03"],
+            22, background=["1F1F1F"],
         ),
     ),
 ]
