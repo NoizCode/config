@@ -159,7 +159,6 @@ screens = [
                 widget.PulseVolume(foreground="FFFFFF",
                                    background="5180F0",
                                    font="sans Bold",
-                                   emoji=True,
                                    **powerline),
                 widget.KeyboardLayout(configured_keyboards=['us','gr'],
                                       foreground="FFFFFF",
