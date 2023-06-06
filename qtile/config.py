@@ -69,7 +69,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5%+"), desc="Raise Volume by 5%")
 ]
 
-groups = [Group(i) for i in "1234"]
+groups = [Group(i) for i in "1234567"]
 
 for i in groups:
     keys.extend(
