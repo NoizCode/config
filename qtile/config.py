@@ -65,8 +65,8 @@ keys = [
     Key([mod],"f11", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
 
     # Media
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5%-"), desc="Lower Volume by 5%"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5%+"), desc="Raise Volume by 5%")
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 2%-"), desc="Lower Volume by 2%"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 2%+"), desc="Raise Volume by 2%")
 ]
 
 groups = [Group(i) for i in "1234567"]
